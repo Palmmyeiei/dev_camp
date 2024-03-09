@@ -1,0 +1,126 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: sticky;
+    top:0
+}
+
+.logo {
+    background-color: blue;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.s-logo {
+    width: 24px;
+    height: 24px;
+    background-color: azure;
+    border-radius: 50%;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.icon {
+    background-color: coral;
+    height: 104px;
+    width: 36px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0;
+    transform: translate(0,-23px);
+    /* position: absolute;
+    top: 0px; */
+}
+
+.icon > p {
+    transform: rotate(-90deg);
+}
+
+.contact {
+    display: flex;
+    gap: 12px;
+}
+
+.hero > .textbox {
+    margin: 0 200px;
+}
+
+.hero > .textbox > p {
+    /* text-align: center; */
+}
+
+.hero,.banner {
+    margin: 30px 0;
+    height: 400px;
+    background-image: url(https://picsum.photos/seed/picsum/800/600);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.textbox > fieldset {
+    width: 240px;
+    height: 240px;
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.textbox > fieldset > p {
+    transform: rotate(90deg);
+}
+
+fieldset legend{
+    text-align: center;
+    transform: rotate(90deg);
+    /* transform: translate(50px,0); */
+    margin: 0 100px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.text-1 {
+    display: flex;
+    width: 50%;
+    gap: 12px;
+    margin: auto;
+}
+
+.yellow-tag {
+    background-color: yellowgreen;
+    width: 45px;
+    height: 55px;
+    transform: translate(0,25px);
+}
+
+.img {
+    display: flex;
+}
+
+.img img{
+    transform: translate(0,-70px);
+}
+
+.banner{
+    height: 300px;
+}
+
+.banner > .info {
+    background-color: rgba(0, 0, 0,0.4);
+    width: 50%;
+    height: 100%;
+    float: right;
+    display: flex;
+    align-items: center;
+}

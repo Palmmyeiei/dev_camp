@@ -1,0 +1,110 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.hero {
+    width: 100%;
+    height: 800px;
+    background-image: url(https://picsum.photos/seed/picsum/2400/1600);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 200px;
+    position: sticky;
+    top:0
+}
+
+.logo {
+    background-color: blue;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.menu > ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.contact {
+    display: flex;
+    gap: 15px;
+}
+
+.contact > .icon {
+    font-size: 12px;
+    background-color: coral;
+    height: 104px;
+    width: 36px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0;
+    transform: translate(0,-23px);
+}
+
+.contact > .icon > p {
+    transform: rotate(90deg);
+}
+
+.contact > .icon > .s-logo {
+    width: 24px;
+    height: 24px;
+    background-color: azure;
+    border-radius: 50%;
+    transform: translate(0,20px);
+}
+
+.contact > .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact > .info > .tel {
+    font-weight: 300px;
+    font-size: 26px;
+}
+
+.detail > .textbox {
+    margin-left: 275px;
+    margin-top: 20px;
+}
+
+fieldset {
+    width: 300px;
+    height: 350px;
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: center;
+    border-color: white;
+    border: solid 3px;
+}
+
+fieldset > legend {
+    text-align: center;
+    transform: rotate(90deg);
+    width: 260px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+fieldset > p {
+    background-color: aqua;
+    width: 300px;
+    height: 200px;
+    transform: rotate(90deg);
+    display: flex;
+}
