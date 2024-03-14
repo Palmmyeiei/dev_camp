@@ -1,16 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
-}
-
-.hero {
-    width: 100%;
-    height: 800px;
-    background-image: url(https://picsum.photos/seed/picsum/2400/1600);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    color: white;
+    font-family: "Kanit", sans-serif;
 }
 
 nav {
@@ -19,7 +10,20 @@ nav {
     justify-content: space-between;
     padding: 20px 200px;
     position: sticky;
-    top:0
+    top: 0;
+}
+
+.hero {
+    width: 100%;
+    height: 650px;
+    background-image: url(https://picsum.photos/seed/picsum/2400/1600);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: white;
+    /* transform: translate(0,-200px); */
+    position: relative;
+    z-index: -1;
 }
 
 .logo {
@@ -79,12 +83,19 @@ nav {
 }
 
 .detail > .textbox {
-    margin-left: 275px;
-    margin-top: 20px;
+    margin-left: 268px;
+    padding-top: 35px;
+}
+
+.detail > .textbox > .headText {
+    position: absolute;
+    font-size: 40px;
+    font-weight: 900;
+    transform: translate(-65px,35px);
 }
 
 fieldset {
-    width: 300px;
+    width: 350px;
     height: 350px;
     transform: rotate(-90deg);
     display: flex;
@@ -96,15 +107,93 @@ fieldset {
 fieldset > legend {
     text-align: center;
     transform: rotate(90deg);
-    width: 260px;
-    font-size: 40px;
-    font-weight: 900;
+    width: 120px;
+    margin-left: 80px;
 }
 
 fieldset > p {
-    background-color: aqua;
-    width: 300px;
-    height: 200px;
+    width: 260px;
+    height: 130px;
     transform: rotate(90deg);
     display: flex;
+    margin: auto;
+    padding-top: 170px;
+    margin-bottom: 70px;
+    padding-left: 30px
+}
+
+.sectionOne {
+    margin: 0 200px;
+}
+
+.sectionOne > .sectionTop {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.sectionOne > .sectionTop > .sectionImg {
+    transform: translate(0,-50px);
+    display: flex;
+}
+
+.sectionOne > .sectionTop >.sectionImg > img {
+    box-shadow: 0px 15px 15px rgb(138, 138, 138);
+}
+
+.sectionOne > .sectionTop > .sectionImg > .square {
+    width: 65px;
+    height: 100px;
+    background-color: rgb(213, 255, 47);
+    transform: translate(0,150px);
+}
+
+.sectionOne > .sectionTop > .sectionText {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sectionOne > .sectionTop > .sectionText > h1 {
+    font-size: 44px;
+}
+
+.sectionOne > .sectionBottom > .itemGrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    gap: 25px;
+    color: rgb(90, 90, 90);
+}
+
+.sectionOne > .sectionBottom > .itemGrid > .item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sectionOne > .sectionBottom > .itemGrid > .item > p {
+    font-size: 14px;
+}
+
+.sectionTwo {
+    margin-top: 100px;
+    height: 400px;
+    background-image: url(https://picsum.photos/seed/picsum/2400/1600);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.sectionTwo > p {
+    background-color: rgba(0, 0, 0,0.3);
+    width: 40%;
+    height: 100%;
+    float: right;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    padding: 0 5%;
+    text-indent: 50px;
 }
