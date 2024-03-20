@@ -1,0 +1,545 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    float: left;
+    width: 100%;
+    display: flex;
+    color: white;
+    font-size: 12px;
+}
+
+.logo {
+    float: left;
+    width: 18.5%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    background-color:  #09ec77;
+    float: left;
+    width: 56.5%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 55px;
+    gap: 55px;
+}
+
+.greenBg {
+    background-color:  #09ec77;
+    float: left;
+    width: 25%;
+    height: 100px;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.heroImg {
+    background-image: url(https://picsum.photos/2000/3000?grayscale);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    width: 75%;
+    height: 86vh;
+    display: flex;
+    align-items: center;
+}
+
+.heroGreen {
+    background-color: #09ec77;
+    float: left;
+    width: 25%;
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+.heroGreen > .heroIcon > i {
+    margin: 40px 11.5px;
+}
+
+.hero > .insideContainer {
+    width: 100%;
+    height: 315px;
+    position: absolute;
+    transform: translate(0,-15px);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.hero > .insideContainer > .plusMinusButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero > .insideContainer > .plusMinusButton > div {
+    background-color: #09ec77;
+    width: 33px;
+    height: 33px;
+    margin: 18px 0;
+    transform: translate(80px,-27px);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    box-shadow: 5px 5px 15px #00000046;
+}
+
+.hero > .insideContainer > .heroTextBox {
+    display: flex;
+    align-items: center;
+}
+
+.hero > .insideContainer > .heroTextBox > .greenBox {
+    background-color:#09ec778f;
+    width: 15%;
+    height: 100%;
+}
+
+.hero > .insideContainer > .heroTextBox > .copyWrite {
+    background-color: white;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero > .insideContainer > .heroTextBox > .copyWrite > .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero > .insideContainer > .heroTextBox > .copyWrite > .text > p1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 10%;
+    color: rgb(99, 99, 99);
+    z-index: 999;
+}
+
+.hero > .insideContainer > .heroTextBox > .copyWrite > .text > p1 > div {
+    background-color: #09ec77b5;
+    width: 60px;
+    height: 2%;
+    transform: translate(-2%, -285%);
+    position: absolute;
+    z-index: -1;
+}
+
+.hero > .insideContainer > .heroTextBox > .copyWrite > .text > p2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 10%;
+    margin-bottom: 15px;
+    color: rgb(99, 99, 99);
+    z-index: 999;
+}
+
+.hero > .insideContainer > .heroTextBox > .copyWrite > .text > p2 > div {
+    background-color: #09ec77b5;
+    width: 215px;
+    height: 2%;
+    transform: translate(0, -285%);
+    position: absolute;
+    z-index: -1;
+}
+
+.hero > .insideContainer > .heroTextBox > .copyWrite > .text > p3 {
+    font-size: 14px;
+    padding: 0 10%;
+    color: rgb(160, 160, 160);
+}
+
+.hero > .insideContainer > .heroTextBox > .copyWrite > .learnMore {
+    background-color: #09ec77;
+    width: 200px;
+    height: 60px;
+    transform: translate(0,263%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 5px 5px 15px #00000046;
+}
+
+.ourService > .container {
+    width: 100%;
+    height: 52vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 71%;
+    height: 50%;
+    /* margin: 0 14.3%; */
+    display: grid;
+    align-items: center;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    box-shadow: 10px 0px 15px 1px #ededed3e;
+}
+
+.content > .detail {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+.content > .detail > p1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(99, 99, 99);
+    z-index: 999;
+}
+
+.content > .detail > p1 > div {
+    background-color: #09ec77b5;
+    width: 178px;
+    height: 6.3px;
+    transform: translate(-1%, -250%);
+    position: absolute;
+    z-index: -1;
+}
+
+.content > .detail > p2 {
+    transform: translate(0, -10%);
+    font-size: 14px;
+    color: rgb(160, 160, 160);
+}
+
+.content > .detail > .allServices {
+    background-color: #09ec77;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 5px 5px 15px #7f7f7f46;
+}
+
+.content > .icon {
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    font-size: 14px;
+    color: rgb(160, 160, 160);
+}
+
+.content > .icon > p2 {
+    font-size: 10px;
+    color: rgb(182, 182, 182);
+}
+
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about > .container {
+    width: 100%;
+    height: 69vh;
+    display: flex;
+    align-items: center;
+}
+
+.container > .aboutImg {
+    background-image: url(https://picsum.photos/seed/2000/3000?grayscale);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    width: 58%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.container > .aboutImg > .greenBox {
+    background-color: #09ec77b5;
+    width: 8%;
+    height:46%;
+    position: absolute;
+}
+
+.container > .textBox {
+    float: left;
+    width: 27.7%;
+    height: 66.67%;
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 15px #b5b5b524;
+}
+
+.container > .textBox > .text {
+    padding: 0 12% 0 19%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3vh;
+}
+
+.container > .textBox > .text > p1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(99, 99, 99);
+    z-index: 999;
+}
+
+.container > .textBox > .text > p1 > div {
+    background-color: #09ec77b5;
+    width: 132px;
+    height: 6.3px;
+    transform: translate(-1%, -250%);
+    position: absolute;
+    z-index: -1;
+}
+
+.container > .textBox > .text > p2 {
+    font-size: 14px;
+    color: rgb(160, 160, 160);
+}
+
+.container > .textBox > .text > p3 {
+    font-size: 10px;
+    color: rgb(182, 182, 182);
+}
+
+.container > .textBox > .text > .learnMore {
+    background-color: #09ec77;
+    width: 200px;
+    height: 60px;
+    margin-top: 1.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 5px 5px 15px #7f7f7f46;
+}
+
+.about > .iconContainer {
+    width: 71%;
+    height: 43vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.iconContainer > .icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.iconContainer > .icon > p1 {
+    margin-top: 1.5vh;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(99, 99, 99);
+    z-index: 999;
+}
+
+.iconContainer > .icon > .one > div {
+    background-color: #09ec77b5;
+    width: 77px;
+    height: 6.3px;
+    transform: translate(-7%, -250%);
+    position: absolute;
+    z-index: -1;
+}
+.iconContainer > .icon > .two > div {
+    background-color: #09ec77b5;
+    width: 65px;
+    height: 6.3px;
+    transform: translate(-7%, -250%);
+    position: absolute;
+    z-index: -1;
+}
+.iconContainer > .icon > .three > div {
+    background-color: #09ec77b5;
+    width: 74px;
+    height: 6.3px;
+    transform: translate(-7%, -250%);
+    position: absolute;
+    z-index: -1;
+}
+
+.iconContainer > .icon > p2 {
+    font-size: 13px;
+    color: rgb(160, 160, 160);
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact > .container {
+    width: 68.3%;
+    height: 53.2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact > .container > p1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(99, 99, 99);
+    z-index: 999;
+}
+
+.contact > .container > p1 > div {
+    background-color: #09ec77b5;
+    width: 160px;
+    height: 6.3px;
+    transform: translate(-1%, -250%);
+    position: absolute;
+    z-index: -1;
+}
+
+.contact > .container > .contactDetail {
+    float: left;
+    width: 100%;
+    height: 40%;
+    margin-top: 3.5vh;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    font-size: 13px;
+    color: rgb(160, 160, 160);
+}
+
+.contact > .container > .contactDetail > .mailTel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6vh;
+}
+
+table {
+    width: 100%;
+}
+
+th,td {
+    padding-bottom: 7.7%;
+}
+
+.contact > .container > .contactDetail > .mailTel > .icon {
+    display: flex;
+    gap: 7%;
+}
+
+.contact > .container > .contactDetail > .mailTel > .icon > i {
+    background-color: #09ec77;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.contact > .container > .contactDetail > .info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 17.5%;
+}
+
+.contact > .container > .contactDetail > .address {
+    margin-left: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2vh;
+}
+
+.contact > .container > .contactDetail > .address > .button {
+    display: flex;
+    gap: 11%;
+}
+
+.contact > .container > .contactDetail > .address > .button > .liveChat {
+    background-color: #09ec77;
+    width: 200px;
+    height: 60px;
+    margin-top: 1.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 5px 5px 15px #7f7f7f1e;
+}
+
+.contact > .container > .contactDetail > .address > .button > .upArrow {
+    background-color: #09ec77;
+    width: 70px;
+    height: 60px;
+    margin-top: 1.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: white;
+    box-shadow: 5px 5px 15px #7f7f7f46;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    height: 60%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 10px;
+    color: rgb(160, 160, 160);
+}
