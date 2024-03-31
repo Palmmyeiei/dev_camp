@@ -1,10 +1,10 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
 }
 
 .filter {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),url(https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/56ba55e9-4231-4440-ab13-9f8d013c6700/TH-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/56ba55e9-4231-4440-ab13-9f8d013c6700/TH-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg);
     height: 50vh;
     width: 100vw;
 }
@@ -45,7 +45,7 @@ nav .right {
 nav .right button {
     background-color: #E50914;
     border: none;
-    border-radius: 4px ;
+    border-radius: 4px;
     color: white;
     padding: 3px 10px;
     font-size: 13px;
@@ -91,14 +91,14 @@ nav .selector {
     transform: scale(1.1);
     transition: 0.5s;
     cursor: pointer;
-    border:  2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .section .poster .card img {
     width: 200px;
     height: 300px;
     object-fit: cover;
-    border:  2px solid rgba(110, 110, 110, 0.3);
+    border: 2px solid rgba(110, 110, 110, 0.3);
 }
 
 .section .poster .card h2 {
@@ -108,7 +108,7 @@ nav .selector {
 }
 
 footer {
-    background-color:#E50914;
+    background-color: #E50914;
     color: white;
     height: 20vh;
 }
@@ -117,13 +117,13 @@ footer .container {
     margin: 0 200px;
     display: grid;
 
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     /* grid-template-columns: 25% 25% 25% 25%; */
 
     /* if want | (row) */
     grid-template-rows: auto;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
 }
