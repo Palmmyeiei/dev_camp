@@ -1,0 +1,47 @@
+[
+    {
+        "firstname": "Palmmy",
+        "lastanme": "Hello",
+        "age": 25,
+        "gender": "Female",
+        "address": {
+            "sub_district": "Pak Nam",
+            "district": "Mueang",
+            "province": "Samut Prakan"
+        },
+        "contact": {
+            "mobile": "081-234-5678",
+            "email": "abc@defg.com"
+        }
+    },
+    {
+        "firstname": "Paiboon",
+        "lastanme": "Panusbordee",
+        "age": 35,
+        "gender": "Male",
+        "address": {
+            "sub_district": "Mahasawasd",
+            "district": "Bangkrew",
+            "province": "Nonthaburi"
+        },
+        "contact": {
+            "mobile": "099-999-9999",
+            "email": "paiboonpa@thaiprogrammer.org"
+        }
+    },
+    {
+        "firstname": "Peter",
+        "lastanme": "Parker",
+        "age": 17,
+        "gender": "Male",
+        "address": {
+            "sub_district": "Chrystie Street",
+            "district": "Manhattan",
+            "province": "New York"
+        },
+        "contact": {
+            "mobile": "099-999-9999",
+            "email": "spiderman@marvel.com"
+        }
+    }
+]
