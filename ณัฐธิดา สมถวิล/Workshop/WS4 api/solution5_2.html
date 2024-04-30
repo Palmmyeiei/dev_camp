@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        let covidData = {};
+        axios.get("https://covid19.ddc.moph.go.th/api/Cases/today-cases-all")
+        .then(response => {
+            let data = response.data[0]
+            covidData.Country = {total_case : data.total_case, total_recovered : data.total_recovered, total_death : data.total_death}
+            let target = document.getElementById('rowData')
+            target.innerHTML = `
+            <td>Thailand</td>
+            <td>${covidData.Country.total_case}</td>
+            <td>${covidData.Country.total_recovered}</td>
+            <td>${covidData.Country.total_death}</td>
+            `
+        })
+        .catch(err => console.log('Error : ', err))
+
+        axios.get("https://covid19.ddc.moph.go.th/api/Deaths/weekly-deaths-line-lists")
+        .then(response => {
+            let data = response.data[0]
+            covidData.Death = {province : data.province, age : data.age, update_date : data.update_date}
+        })
+        .catch(err => console.log('Error : ', err))
+    </script>
+    <table>
+        <thead>
+            <tr>
+                <td>Category</td>
+                <td>Cases</td>
+                <td>Recovered</td>
+                <td>Deaths</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="rowData">
+                <!-- add data -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

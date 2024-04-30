@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <table>
+        <tbody id="rowData">
+
+        </tbody>
+    </table>
+
+
+
+
+
+    <div class="grid-cols-1 sm:grid md:grid-cols-2 ">
+        <div
+            class="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+            <a href="#!">
+                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+                    alt="Hollywood Sign on The Hill" />
+            </a>
+            <div class="p-6">
+                <h5 class="mb-2 text-xl font-medium leading-tight">Card title</h5>
+                <p class="mb-4 text-base">
+                    This is a longer card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+            <a href="#!">
+                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/042.webp"
+                    alt="Palm Springs Road" />
+            </a>
+            <div class="p-6">
+                <h5 class="mb-2 text-xl font-medium leading-tight">Card title</h5>
+                <p class="mb-4 text-base">
+                    This is a longer card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+            <a href="#!">
+                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/044.webp"
+                    alt="Skyscrapers" />
+            </a>
+            <div class="p-6">
+                <h5 class="mb-2 text-xl font-medium leading-tight">Card title</h5>
+                <p class="mb-4 text-base">
+                    This is a longer card with supporting text below as a natural
+                    lead-in to additional content.
+                </p>
+            </div>
+        </div>
+
+        <div
+            class="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+            <a href="#!">
+                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/city/043.webp"
+                    alt="Los Angeles Skyscrapers" />
+            </a>
+            <div class="p-6">
+                <h5 class="mb-2 text-xl font-medium leading-tight">Card title</h5>
+                <p class="mb-4 text-base">
+                    This is a longer card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        let users = []
+        axios.get("https://script.google.com/macros/s/AKfycbxEeQCoItzx-HQYoqjkIl3lUKKl0M8yE7gTlK6MWrzMOC9AJvxKI8PByoEBqQmdhjyz/exec")
+            .then((response) => {
+                let data = response.data
+                let target = document.getElementById('rowData')
+                let i = 0;
+                for (const [firstname, lastname, phone, email] of data) {
+                    if (i == 0) {
+                        target.innerHTML += `
+                            <tr>
+                                <th>${firstname}</th>
+                                <th>${lastname}</th>
+                                <th>${phone}</th>
+                                <th>${email}</th>
+                            </tr>`
+                    } else {
+                        target.innerHTML += `
+                            <tr>
+                                <td>${firstname}</td>
+                                <td>${lastname}</td>
+                                <td>${phone}</td>
+                                <td>${email}</td>
+                            </tr>`
+                    }
+                    i += 1
+                    console.log(`Firstname : ${firstname} , Lastname : ${lastname} , Phone : ${phone} , Email : ${email}`);
+                }
+            }).catch((err) => {
+                alert("Error", err)
+            });
+    </script>
+</body>
+
+</html>

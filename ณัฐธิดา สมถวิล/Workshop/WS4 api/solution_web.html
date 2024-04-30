@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <table id="result">
+
+    </table>
+
+    <script>
+        // const data = [["dsa" , "321321"],["dsa" , "321321"] , ["dsa" , "321321"]]
+
+        // for(let i = 0; i < data.length; i++){
+        //     for (let j = 0; j < data[i].length; j++){
+        //         console.log(data[i][j])
+        //     }
+        // }
+
+        const data = ["cat", "dog", "bird", "fish"]
+
+        for (const animal of data) {
+            console.log(animal)
+
+        }
+        const table = document.getElementById("result")
+
+
+        const datav2 = [["animal", "age", "color"], ["cat", 24, "black"], ["dog", 12, "white"], ["bird", 2, "yellow"], ["fish", 1, "red"]]
+        let i = 0;
+
+        for (const [animal, age, color] of datav2) {
+            if (i == 0) {
+                table.innerHTML += <tr><th>${animal}</th><th>${age}</th><th>${color}</th></tr>
+            }
+            else {
+                table.innerHTML += <tr><td>${animal}</td><td>${age}</td><td>${color}</td></tr>
+            }
+            i += 1
+
+
+            console.log(`Animal: ${animal} , Age: ${age} , Color: ${color}`)
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

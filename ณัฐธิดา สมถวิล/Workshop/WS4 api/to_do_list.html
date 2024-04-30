@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+<body>
+    <script>
+        // get value from input when hit the submit button
+        // save the value to list variable
+        // show the list
+        let todos = [];
+        const saveTodo =()=> {
+            let input = document.getElementById('todoInput')
+            let inputValue = input.value
+            if (!inputValue){
+                alert("Please enter list")
+                return
+            }
+            todos.push(inputValue)
+            let targetList = document.getElementById('todoList')
+            console.log(todos);
+            let temp = ""
+            for (i=0; i<todos.length; i++){
+                temp += `<li>${todos[i]}</li>`
+            }
+            targetList.innerHTML = temp
+            input.value = ''
+        }
+    </script>
+    <div>
+        <input id="todoInput"  type="text">
+        <button onclick="saveTodo()">Save</button>
+        <div>To do list</div>
+        <ul id="todoList">
+            
+        </ul>
+    </div>
+</body>
+</html>
