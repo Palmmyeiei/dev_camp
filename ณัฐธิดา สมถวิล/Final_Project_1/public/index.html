@@ -1,132 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dangchoodwiwa</title>
+    <title>แดงชุดวิวาห์ เช่าชุดแต่งงานลำพูน เชียงใหม่</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.5/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
 </head>
+
 <body class="prompt text-[#8b7454] bg-[url('./img/bg.jpg')] bg-center bg-no-repeat bg-cover w-full h-full">
     <nav
-            class="flex-no-wrap fixed top-0 z-10 flex w-full items-center justify-between bg-[url('./img/bg.jpg')] px-10 py-5 shadow-md shadow-black/5">
-            <div class="font-normal text-3xl text-[#9d404f]">
-                แดงชุดวิวาห์ ลำพูน
-            </div>
-            <ul class="flex gap-8 text-xl">
-                <li class="hover:font-medium"><a href="./index.html">หน้าแรก</a></li>
-                <li class="dropdown dropdown-hover">
-                    <div tabindex="0" role="button" class="hover:font-medium">แพ็คเกจทั้งหมด</div>
-                    <ul tabindex="0"
-                        class="dropdown-content z-[1] left-[-15px] menu p-2 shadow border border-[#cdbcab] rounded-box w-52 bg-[#fcf3f0f2]">
-                        <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">แพ็คเกจเช่าชุดแต่งงาน 3,000 บาท</a></li>
-                        <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">แพ็คเกจถ่ายพรีเวดดิ้งครึ่งวัน 5,900 บาท <i
-                                    class="fa-regular fa-thumbs-up"></i></a></li>
-                        <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">แพ็คเกจถ่ายพรีเวดดิ้งเต็มวัน 9,900 บาท</a>
-                        </li>
-                        <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">แพ็คเกจเหมาเหมา 29,900 บาท <i
-                                    class="fa-regular fa-thumbs-up"></i></a></li>
-                        <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">แพ็คเกจจัดเล็กเซ็ตประหยัด 7,900 บาท <i
-                                    class="fa-regular fa-thumbs-up"></i></a></li>
-                        <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">แพ็คเกจเลือกได้ ทั้งวันจริงและวันพรี 9,900
-                                บาท</a></li>
-                        <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">แพ็คเกจสุดคุ้ม รับทั้งชุดและเซ็ตพิธี
-                                12,900 บาท</a></li>
-                    </ul>
+        class="flex-no-wrap fixed top-0 z-10 flex w-full items-center justify-between bg-[url('./img/bg.jpg')] px-10 py-5 shadow-md shadow-black/5">
+        <h1 class="font-normal text-3xl text-[#9d404f]">
+            แดงชุดวิวาห์ ลำพูน
+        </h1>
+        <ul class="flex gap-8 text-xl">
+            <li class="hover:font-medium"><a href="./index.html">หน้าแรก</a></li>
+            <li class="dropdown dropdown-hover">
+                <div tabindex="0" role="button" class="hover:font-medium">แพ็คเกจทั้งหมด</div>
+                <ul id="navbar" tabindex="0"
+                    class="dropdown-content z-[1] left-[-15px] menu p-2 shadow border border-[#cdbcab] rounded-box w-52 bg-[#fcf3f0f2]">
+                    <!-- package menu -->
+                </ul>
+            </li>
+            <li class="dropdown dropdown-hover">
+                <div tabindex="0" role="button" class="hover:font-medium">แกลลอรี่</div>
+                <ul tabindex="0"
+                    class="dropdown-content z-[1] left-[-15px] menu p-2 shadow border border-[#cdbcab] rounded-box w-52 bg-[#fcf3f0f2]">
+                    <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">ผลงานการแต่งหน้า</a></li>
+                    <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">ผลงานพรีเวดดิ้ง</a></li>
+                    <li><a href="./wedding.html"
+                            class="hover:font-medium hover:bg-[#e3c1b4bf]">ผลงานการจัดงานแต่งงาน</a></li>
+                </ul>
+            </li>
+            <li class="hover:font-medium">ติดต่อ</li>
+        </ul>
+        <div>
+            <i class="fa-brands fa-facebook fa-2xl pr-3" style="color: #9d404f;"></i>
+            <i class="fa-brands fa-facebook-messenger fa-2xl" style="color: #9d404f;"></i>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <section class="w-full h-full flex items-center">
+        <div class="animationGallery w-[75vw] pt-20 items-center flex flex-nowrap overflow-hidden group">
+            <ul
+                class="flex items-center justify-center md:justify-start [&_img]:max-w-none animate-loop-scroll group-hover:paused">
+                <li>
+                    <img src="./img/5.png" height="500" width="500" />
                 </li>
-                <li class="dropdown dropdown-hover">
-                    <div tabindex="0" role="button" class="hover:font-medium">แกลลอรี่</div>
-                    <ul tabindex="0"
-                        class="dropdown-content z-[1] left-[-15px] menu p-2 shadow border border-[#cdbcab] rounded-box w-52 bg-[#fcf3f0f2]">
-                        <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">ตัวอย่างภาพ พรีเวดดิ้ง</a></li>
-                        <li><a class="hover:font-medium hover:bg-[#e3c1b4bf]">ภาพบรรยากาศวันแต่งงาน</a></li>
-                    </ul>
+                <li>
+                    <img src="./img/1.png" height="500" width="500" />
                 </li>
-                <li class="hover:font-medium">ติดต่อ</li>
+                <li>
+                    <img src="./img/2.png" height="500" width="500" />
+                </li>
+                <li>
+                    <img src="./img/3.png" height="500" width="500" />
+                </li>
+                <li>
+                    <img src="./img/4.png" height="500" width="500" />
+                </li>
+                <li>
+                    <img src="./img/6.png" height="500" width="500" />
+                </li>
             </ul>
-            <div>
-                <i class="fa-brands fa-facebook fa-2xl pr-3" style="color: #9d404f;"></i>
-                <i class="fa-brands fa-facebook-messenger fa-2xl" style="color: #9d404f;"></i>
+            <ul class="flex items-center justify-center md:justify-start [&_img]:max-w-none animate-loop-scroll group-hover:paused"
+                aria-hidden="true">
+                <li>
+                    <img src="./img/5.png" height="500" width="500" />
+                </li>
+                <li>
+                    <img src="./img/1.png" height="500" width="500" />
+                </li>
+                <li>
+                    <img src="./img/2.png" height="500" width="500" />
+                </li>
+                <li>
+                    <img src="./img/3.png" height="500" width="500" />
+                </li>
+                <li>
+                    <img src="./img/4.png" height="500" width="500" />
+                </li>
+                <li>
+                    <img src="./img/6.png" height="500" width="500" />
+                </li>
+            </ul>
+        </div>
+        <div class="bg-[#9d404f] w-[25vw] h-[100vh] flex justify-center items-end">
+        </div>
+        <div class="h-[315px] absolute grid grid-cols-2 animate-fade-down">
+            <div class="flex items-center translate-x-[50vw]">
+                <div class="bg-[#9d40509d] w-[8vw] h-full "></div>
+                <div class="copyWrite bg-white w-[37vw] h-full flex flex-col justify-center  items-center">
+                    <div class="flex flex-col pt-8">
+                        <div class="text-6xl text-[#9d404f] text-center mb-5">ร้านแดงชุดวิวาห์</div>
+                        <div class="text-xl text-center">บริการให้เช่าชุดแต่งงาน ถ่ายพรีเวดดิ้ง
+                            จัดงานแต่งงาน<br>ครบวงจร ทั่วทั้ง ลำพูน เชียงใหม่ และลำปาง</div>
+                        <div class="text-2xl text-[#9d404f] text-center mt-7">แพ็คเกจเริ่มต้นเพียง <span
+                                class="font-semibold underline">3,000 บาท</span></div>
+                    </div>
+                    <a href="./index.html"
+                        class="bg-[#9d404f] w-[200px] h-[60px] translate-y-[72%] flex justify-center items-center gap-[12px] text-[16px] font-semibold text-white drop-shadow-[5px_5px_15px_rgba(0,0,0,0.25)] hover:bg-[#e3c1b4] hover:text-[#9d404f]">
+                        แพ็คเกจทั้งหมด
+                        <i class="allPack fa-solid fa-arrow-right-long fa-sm translate-y-[2px]"></i>
+                    </a>
+                </div>
             </div>
-        </nav>
-        <!-- Hero -->
-        <section class="w-full h-full flex items-center">
-            <div class="animationGallery w-[75vw] pt-20 items-center flex flex-nowrap overflow-hidden group">
-                <ul
-                    class="flex items-center justify-center md:justify-start [&_img]:max-w-none animate-loop-scroll group-hover:paused">
-                    <li>
-                        <img src="./img/5.png" height="500" width="500" />
-                    </li>
-                    <li>
-                        <img src="./img/1.png" height="500" width="500" />
-                    </li>
-                    <li>
-                        <img src="./img/2.png" height="500" width="500" />
-                    </li>
-                    <li>
-                        <img src="./img/3.png" height="500" width="500" />
-                    </li>
-                    <li>
-                        <img src="./img/4.png" height="500" width="500" />
-                    </li>
-                    <li>
-                        <img src="./img/6.png" height="500" width="500" />
-                    </li>
-                </ul>
-                <ul class="flex items-center justify-center md:justify-start [&_img]:max-w-none animate-loop-scroll group-hover:paused"
-                    aria-hidden="true">
-                    <li>
-                        <img src="./img/5.png" height="500" width="500" />
-                    </li>
-                    <li>
-                        <img src="./img/1.png" height="500" width="500" />
-                    </li>
-                    <li>
-                        <img src="./img/2.png" height="500" width="500" />
-                    </li>
-                    <li>
-                        <img src="./img/3.png" height="500" width="500" />
-                    </li>
-                    <li>
-                        <img src="./img/4.png" height="500" width="500" />
-                    </li>
-                    <li>
-                        <img src="./img/6.png" height="500" width="500" />
-                    </li>
-                </ul>
-            </div>
-            <div class="bg-[#9d404f] w-[25vw] h-[100vh] flex justify-center items-end">
-            </div>
-            <div class="h-[315px] absolute grid grid-cols-2 animate-fade-down animate-once">
-                <div class="flex items-center translate-x-[50vw]">
-                    <div class="bg-[#9d40509d] w-[8vw] h-full "></div>
-                    <div class="copyWrite bg-white w-[37vw] h-full flex flex-col justify-center  items-center">
-                        <div class="flex flex-col pt-8">
-                            <div class="text-6xl text-[#9d404f] text-center mb-5">ร้านแดงชุดวิวาห์</div>
-                            <div class="text-xl text-center">บริการให้เช่าชุดแต่งงาน ถ่ายพรีเวดดิ้ง
-                                จัดงานแต่งงาน<br>ครบวงจร ทั่วทั้ง ลำพูน เชียงใหม่ และลำปาง</div>
-                            <div class="text-2xl text-[#9d404f] text-center mt-7">แพ็คเกจเริ่มต้นเพียง <span
-                                    class="font-semibold underline">3,000 บาท</span></div>
+        </div>
+    </section>
+    <!-- Package -->
+    <section class="my-10 mx-16">
+        <div class="text-3xl font-medium text-center pt-10">แพ็คเกจทั้งหมด</div>
+        <section class="pt-10">
+            <div class="text-2xl pb-7">แพ็คเกจยอดฮิต แนะนำ <i class="fa-regular fa-thumbs-up"></i></div>
+            
+
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+         <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+            
+            
+            
+            
+            
+            
+            
+            <div class="w-full grid lg:grid-cols-3 md:grid-cols-1 gap-12">
+                <div class="card glass">
+                    <figure class="w-fit h-fit"><img src='./img/IMG_4450.JPG' alt="จัดงานแต่งงาน"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">แพ็คเกจเหมาเหมา 25,900 บาท</h2>
+                        <p><b>[ 🎊 💌 สวย ครบ จบ งบไม่บานปลาย ]</b>
+                            <br><i>การจัดงานแต่งงานไม่ได้แพงเสมอไป!!</i>
+                            <br>ด้วยแพ็คเกจแต่งงานราคาประหยัด ได้ครบทุกอย่างในที่เดียว
+                        </p>
+                        <div class="card-actions justify-end">
+                            <a href=""
+                                class="text-xs border border-[#9d404f] hover:bg-[#9d404f] hover:text-white rounded-2xl py-1 px-2">ดูรายละเอียดเพิ่มเติม</a>
                         </div>
-                        <a href="./index.html"
-                            class="bg-[#405c9d] w-[200px] h-[60px] translate-y-[72%] flex justify-center items-center gap-[12px] text-[16px] font-semibold text-white drop-shadow-[5px_5px_15px_rgba(0,0,0,0.25)] hover:bg-[#e3c1b4] hover:text-[#9d404f]">
-                            แพ็คเกจทั้งหมด
-                            <!-- <i class="fa-solid fa-arrow-right-long fa-sm translate-y-[2px]"
-                                style="{color: #ffffff} :hover {color: #9d404f}"></i> -->
-                        </a>
+                    </div>
+                </div>
+                <div class="card glass">
+                    <figure class="w-fit h-[75%]"><img src='./img/IMG_4459.JPG' /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">แพ็คเกจจัดเล็กเซ็ตประหยัด 7,900 บาท</h2>
+                        <p><b>[ 💸🤍 เอาใจคนงบน้อย ได้ทั้งซุ้มถ่ายรูปและอุปกรณ์ในพิธี ]</b> ถูกกว่านี้ไม่มีอีกแล้ว
+                            แพ็คเกจเพื่อคู่บ่าว-สาวที่อยากได้แค่ซุ้มและเซ็ตพิธีมัดมือ</p>
+                        <div class="card-actions justify-end">
+                            <a href=""
+                                class="text-xs border border-[#9d404f] hover:bg-[#9d404f] hover:text-white rounded-2xl py-1 px-2">ดูรายละเอียดเพิ่มเติม</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    <!-- Package -->
-    <section class="">
-        <div class="text-xl underline text-blue-600">แพ็คเกจทั้งหมด</div>
+
+        <section class="pt-14">
+            <div class="text-2xl pb-7">แพ็คเกจเช่าชุดแต่งงาน</div>
+            <div class="w-full grid grid-cols-3 gap-12">
+                <div class="card glass">
+                    <figure class="w-fit h-[50vh]"><img src='./img/IMG_4429.JPG' class="translate-y-[-50px]" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">เช่าชุดแต่งงาน 3,000 บาท</h2>
+                        <p>เช่าชุดไทย/ราตรี ได้ทั้งชุดบ่าว-สาว และเครื่องประดับครบเซ็ต</p>
+                        <div class="card-actions justify-end">
+                            <a href=""
+                                class="text-xs border border-[#9d404f] hover:bg-[#9d404f] hover:text-white rounded-2xl py-1 px-2">ดูรายละเอียดเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card glass">
+                    <figure class="w-fit h-[50vh]"><img src='./img/IMG_4441.jpg' class="translate-y-[50px]" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">เช่าชุดแต่งงานไทยศิวาลัย 6,000 บาท</h2>
+                        <p>[ 🎉 ถูกที่สุดในลำพูน ] เช่าชุดไทยศิวาลัยปักเต็ม ได้ทั้งชุดบ่าว-สาว และเครื่องประดับครบเซ็ต
+                        </p>
+                        <div class="card-actions justify-end">
+                            <a href=""
+                                class="text-xs border border-[#9d404f] hover:bg-[#9d404f] hover:text-white rounded-2xl py-1 px-2">ดูรายละเอียดเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-14">
+            <div class="text-2xl pb-7">แพ็คเกจถ่ายพรีเวดดิ้ง</div>
+            <div class="w-full grid grid-cols-3 gap-12">
+                <div class="card glass">
+                    <figure class="w-fit h-fit"><img src='./img/IMG_4453.JPG' /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">ถ่ายพรีเวดดิ้ง ครึ่งวัน 5,900 บาท</h2>
+                        <p>ถ่ายจำนวน 2 ชุด พร้อมแต่งหน้าทำผม <u>💐 รับไปเลย</u><br>[ กรอบรูปพร้อมรูปอัดขยาย
+                            ขนาด20x24นิ้ว <b>ฟรี!!</b> ]<br>[ ไฟล์รูปทั้งหมด <b>ไม่ขายเพิ่ม!!</b> ]</p>
+                        <div class="card-actions justify-end">
+                            <a href=""
+                                class="text-xs border border-[#9d404f] hover:bg-[#9d404f] hover:text-white rounded-2xl py-1 px-2">ดูรายละเอียดเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card glass">
+                    <figure class="w-fit h-fit"><img src='./img/IMG_4451.jpg' /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">ถ่ายพรีเวดดิ้ง เต็มวัน 9,900 บาท</h2>
+                        <p>ถ่ายจำนวน 3 ชุด พร้อมแต่งหน้าทำผม <u>💐 รับไปเลย</u><br>[ กรอบรูปพร้อมรูปอัดขยาย
+                            ขนาด20x30นิ้ว <b>ฟรี!!</b> ]<br>[ ไฟล์รูปทั้งหมด <b>ไม่ขายเพิ่ม!!</b> ]</p>
+                        <div class="card-actions justify-end">
+                            <a href=""
+                                class="text-xs border border-[#9d404f] hover:bg-[#9d404f] hover:text-white rounded-2xl py-1 px-2">ดูรายละเอียดเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </section>
 </body>
+
 </html>

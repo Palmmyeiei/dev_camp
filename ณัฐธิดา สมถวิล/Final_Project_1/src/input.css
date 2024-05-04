@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.allPack {
+  color: #ffffff
+}
+.allPack:hover {
+  color: #9d404f
+}
+
 .prompt-light {
     font-family: "Prompt", sans-serif;
     font-weight: 200;

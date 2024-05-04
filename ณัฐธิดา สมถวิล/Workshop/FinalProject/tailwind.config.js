@@ -1,8 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./src/**/*.{html,js}"],
-    theme: {
-      extend: {},
+  content: ["./public/*.{html,js}"],
+  theme: {
+    extend: {
+      animation: {
+        "loop-scroll": "loop-scroll 50s linear infinite",
+      },
+      keyframes: {
+        "loop-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+      },
     },
-    plugins: [],
-  }
+  },
+  plugins: [ require("tailwindcss-animated"),],
+};
